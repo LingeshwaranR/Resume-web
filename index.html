@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+ 
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+    height:100%;
+   background-repeat: no-repeat;
+   background-size: cover;
+     background-attachment: fixed;
+    font-family: "Lato", sans-serif;
+background-image: url("https://1.bp.blogspot.com/-lu63VPaMPUY/Wn5aGxBBoEI/AAAAAAAACZY/wb9fTDg6elMmToGdqletd0IWIDo3VwcZwCLcBGAs/s1600/MLseries-1.png");}
+* {
+  box-sizing: border-box;
+}
+.progress-container {
+  width: 450px;
+  height: 4px;
+  position: fixed;
+  background: black;
+}
+
+.progress-bar {
+  height: 4px;
+  background: #0179F4;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+.sidenav {
+    height: 100%;
+    width: 450px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:black ;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 20px;
+   animation:cubic-bezier;
+}
+
+.blog {
+    height: 100%;
+    width: 765px;
+    z-index: 1;
+    margin-left: 150px;
+        margin-top: 20px;
+
+    top: 0;
+    left: 0;
+    background-color:black ;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 20px;
+   animation:cubic-bezier;
+}
+
+.blogb {
+    height:100%;
+    width: 765px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    margin-left: 150px;
+    margin-top: 20px;
+    background-color:black ;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 20px;
+   animation:cubic-bezier;
+}
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.container {
+    position: relative;
+    width: 765px;
+        opacity:0.9;
+
+    margin-left:150px;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: black;
+  opacity: 0.8;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+    height: 100%; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+a:hover {
+    background-color: black;
+}
+.button {
+    background-color:black;
+    border: none;
+    color: white;
+    padding: 7px 18px;
+    text-align: center;
+margin-left:210px;
+border-radius: 12px;
+transition: all 0.5s;
+text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button1{
+    background-color:#0179F4;
+    border: none;
+    color: white;
+    padding: 7px 18px;
+    text-align: center;
+margin-left:300px;
+border-radius: 12px;
+transition: all 0.5s;
+text-decoration: none;
+    display: inline-block;
+    
+    cursor: pointer;
+    
+}
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+* {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+
+
+.container1 {
+	width:100%;
+        background: black;
+	margin-left: 150px;
+            opacity: 0.9;
+
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:black;
+	padding:25px;
+    opacity: 0.9;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: #F96;
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:#0179F4;
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:#09C;
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+
+.side{
+    width: 73%;
+    background: black;
+    opacity: 0.9;
+    display: none;
+}
+
+.main {
+    margin-left:30%;
+    font-size: 15px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+    margin-top: 100px;
+    
+}
+.icon-bar {
+    width: 10%;
+    display:none;
+    opacity:0.7;
+    position:fixed;
+    background-color: black;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 48px;
+}
+
+.icon-bar a:hover {
+    background-color: #0179F4;
+}
+
+.active {
+    background-color: black !important;
+}
+@media (min-width: 1200px) and (max-width: 1280px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+@media (min-width: 375px) and (max-width: 1150px) and (orientation : portrait)
+{
+  /* For mobile phones: */
+    .main,.column,.blog,.blogb,.container {
+    width:95%;
+    margin-left:5%;
+    font-size:32px;
+
+  }
+  .main{margin-top:0px;}
+ .icon-bar{display:block;
+     height:100%;
+ }
+  
+  .side{
+      height: 10%;
+      display: block;
+       font-size: 80px;
+
+      width: 95%;
+      margin-left: 5%;
+  }
+  
+  .button,.button1{
+     font-size:36px;
+     margin-left:50%;
+  }
+.sidenav   { display: none;
+}
+}
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 900px) 
+and (orientation : portrait)
+{
+      /* For i phones: */
+    .main,.column,.blog,.blogb,.container {
+    width:100%;
+    margin-left:0px;
+    font-size:32px;
+    
+  }
+  
+  .side{
+      height: 10%;
+      display: block;
+      width: 100%;
+ font-size: 80px;
+ margin-left: 0px;
+      position:relative;
+  }
+   height:100%;
+   background-repeat: no-repeat;
+    background-attachment: fixed;
+  .button,.button1{
+     font-size:36px;
+     margin-left:50%;
+  }
+.sidenav   { display: none;
+}
+}
+
+
+
+</style>
+<link rel="icon" href="https://3.bp.blogspot.com/-hLbJLwuQTQk/Wn7_gaiLK7I/AAAAAAAACbc/bZ07wW17wDMz5gJNP-F5wEPMOfN4Yd8HACLcBGAs/s1600/LR.png" type="image/gif" sizes="16x16">
+
+</head>
+<body>
+    
+  
+ 
+<div class="icon-bar">
+  <a href="#home"><i class="fa fa-home" style="margin-top:550px"></i></a> 
+   <a class="w3-animate-right" href="#profile"><i class="fa fa-user w3"></i></a>
+  <a class="w3-animate-right" href="#intellikart"><i class="fa fa-code "></i></a>
+  <a class="w3-animate-right" href="#contact"><i class="fa fa-address-card"></i></a>
+  <a class="w3-animate-right" href="https://techkshare.blogspot.in/" target="blank"><i class="fa fa-pencil-square"></i>
+</a>
+</div>
+<div class="main" id="home" >    
+   <div class="sidenav w3-black w3-sidebar">
+     <h2 class="w3-animate-right" style="color:#0179F4  ; margin-left: 120px;margin-top: 100px"><b>LINGESHWARAN R</b><image src="https://3.bp.blogspot.com/-921OIN1VYbo/Wn8I7cuHloI/AAAAAAAACcI/rwsBtdMGRnAqoF1CsJtq3i9iZb_QKxQcACLcBGAs/s1600/lr1.png" style="margin-left: 5px; height:50px;width: 50px; "/></h2>
+      <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>
+     <h4 class="w3-animate-right" style="color:whitesmoke  ; margin-left: 240px;"> Computer Science Undergraduate</h4>
+  <a style=" margin-left: 330px;margin-top: 50px;font-size: 16px" class="w3-animate-right" href="#profile">Profile<i class="fa fa-user w3-animate-right" style="margin-left: 10px" aria-hidden="true"></i></a>
+  <a style=" margin-left: 330px;font-size: 16px" class="w3-animate-right" href="#intellikart">Projects<i class="fa fa-code w3-animate-right" style="margin-left: 10px" aria-hidden="true"></i>
+</a>
+  <a style=" margin-left: 330px;font-size: 16px" class="w3-animate-right" href="#contact">Contact <i class="fa fa-address-card w3-animate-right" style="margin-left: 10px" aria-hidden="true"></i>
+</a>
+  <a style=" margin-left: 330px;color:#0179F4;margin-top: 100px; font-size: 16px" class="w3-animate-right" href="https://techkshare.blogspot.in/" target="blank"><b>My Blog</b><i class="fa fa-pencil-square" style="margin-left: 10px" aria-hidden="true"></i>
+</a>
+
+</div>
+
+<div class="side">
+                         <p class="w3-animate-right" style="color:#0179F4; margin-left: 5%;"><b>LINGESHWARAN R</b><image src="https://3.bp.blogspot.com/-921OIN1VYbo/Wn8I7cuHloI/AAAAAAAACcI/rwsBtdMGRnAqoF1CsJtq3i9iZb_QKxQcACLcBGAs/s1600/lr1.png" style="margin-left: 5px; height:100px;width: 100px; "/></p>
+
+    </div>
+   
+    <div class="container">
+        <img class="w3-animate-top" src="https://2.bp.blogspot.com/-Dn8JDGCdLXw/WoHU13-4III/AAAAAAAACdU/QsWxdkS0N3sGWIkkTS18Sb6DUa6Q7aDxgCLcBGAs/s1600/WhatsApp%2BImage%2B2018-02-12%2Bat%2B11.23.06%2BPM%2B%25281%2529.jpeg"  alt="lingesh"  style="width:100%" hspace="150"  >
+      <div class="middle" >
+          <div class="text w3-animate-bottom" style="color:#0179F4 "><b>I'M_A_ANDROID_DEVELOPER</b></div>
+  </div>
+        </div>
+  
+    <div class="blog  w3-container w3-card w3-black w3-round " id="profile"><br>
+        <span class="w3-right w3-opacity">16 min</span>
+        <p style="color:#0179F4 " class="w3-animate-top"><b>Profile</b></p><br>
+        <hr class="w3-clear">
+        <div class="row">
+  <div class="column w3-animate-left" style="background-color:black;">
+    <p>About me</p>
+
+    <ul>
+        <li ><strong>Name : </strong> <strong style="color:#0179F4;">Lingeshwaran R</strong></li>
+  <li><strong>Qulaification : </strong>II BE CSE</li>
+  <li><strong>Languages Known : </strong><ul style="margin-left: 40px">
+          <li>C,C++</li>
+    <li>python</li>
+        <li>Java</li>
+    <li>R</li>
+    <li>Android</li>
+        <li>Html,CSS</li>
+
+
+  </ul>
+
+
+  </ul>
+   </div>
+  <div class="column w3-animate-right" style="background-color:#0179F4  ;">
+   <p class="head">Skills</p>
+  <ul>
+    <li>Developing Android Application</li>
+    <li>Web Design with HTML & CSS</li>
+  </ul>
+  <p class="head">Education</p>
+  <ul>
+  
+      <li>Scholing At<b><a href="http://www.tvsmhss.org/" target="_blank"> Tvs Matriculation Higher Secondary School</a></b></li>
+   <li>Undergraduate At <b><a href="http://vcet.ac.in/" target="_blank"> Velammal College Of Engineering And Technology </a></b></li>
+
+  </ul>
+  <a href="https://drive.google.com/file/d/1SIVc0opq9vfCvdDEsHdeJEfr9bbScnVx/view" target="blank" class="button" ><span>Check Me</span></a>
+
+  </div>
+</div>
+    </div>
+
+    <div class="blogb w3-container w3-card w3-black w3-round"><br>
+        <span class="w3-right w3-opacity">16 min</span>
+        <p style="color:#0179F4 "><b>Projects</b></p><br>
+        <hr class="w3-clear">
+        <div id="intellikart">
+        <p style="color:#0179F4 ">Intellikart</p>
+        <p style="text-align:center;">For Queue Less And Effortless Billing</p>
+        <p> Shopping at big malls has become a daily activity in metro cities. There is a huge rush in the mall, special occasions and weekends. This rush in the market is mainly a problem when we are standing in the queue for billing the purchases. People picks different items and drop in the trolley. After that only there exists the toughest part of the shopping, the billing and its queue. Our aim is to develop a solution for the above mentioned challenge using IOT and mobile application. To overcome the problems stated above and to improve the existing system, we have designed a trolley which is going to be really SMART. This can be done by simple reading the barcode from the products and a barcode reader with a circuit is attached on the shopping trolley.
+</p>
+<p>Description</p>
+<ul>
+    <li>Automatic billing of products by using barcode reader will 	be a more essential option in the future of shopping</li>
+    <li>
+       The system based on barcode technique is efficient, speed 	and shows amazing  performance.</li>
+    <li> This system using IOT will save time of customers and 	manpower required in stores and cost associated with the product.
+</li>
+    
+</ul>
+<p>Budget Heads</p>
+<image src="https://4.bp.blogspot.com/-sk2MxzQo7XA/Wn7N2o6I7MI/AAAAAAAACZ0/-cCEsWKd050kruV2tqAJj2xnqGUZUhqEQCLcBGAs/s1600/Capture.PNG"/>
+<p>Key Feature</p>
+<p>The buyers purchase is been monitored using data analytics and graph is been generated. And with help of these graphs marketing techniques is been generated.Based on each customers marketting graph each customer will be offered with induvidual offers to pull the customers to the shop often and to increase the sales of the shop.
+</p>
+<image class="center" src="https://1.bp.blogspot.com/-vErvUUJy1JQ/Wn7U99eQX6I/AAAAAAAACac/yy0aBOvjrQEsXzLnjSGb-Exms8AsNZXlQCLcBGAs/s1600/IMG20170909112229.jpg" style="width:600px;height:400px;text-align:center  "/>
+<p>Contributors</p>
+    <ul>
+        <li>Myself</li>
+        <li>Selvakumar</li>
+        <li>Naveen Prasath</li>
+        <li> Nirmal Raaj</li>
+    </ul>
+  <a href="https://drive.google.com/file/d/1gQmo7LdbKuR1ANTDY3OFEfFWpm7uRnb2/view?usp=sharing" target="blank" class="button1" ><span>View Document </span></a>
+        <hr class="w3-clear">
+
+<div  id="farm2home">
+    <p  style="color:#0179F4 ">Farm2Home</p>
+    <p style="text-align:center;">A Tool For Farmer Welfare</p>
+    <p>Farmer ->consumer = Farm2Home<br>
+We have a plan of implementing a mobile app named FARM2HOMEthat helps to overcome the farmer’s issues. The app consists of two ends, one is for farmers and the other is for buyers(people). The farmers can login to the app and can start posting their products with its dynamic rates (rate is fixed by the local agriculture committee) after setting up their personal details like name, location, contact etc. At the other end the buyers can login to the app and can buy the vegetables by seeing the nearby farmers posts (posts are filtered with location of the buyers) and can add them to cart and after all the commodities are purchased they are shipped to their residence. Our FARM2HOMEfocuses on both the farmer and the customer end by neglecting the middle man and enriching farmer’s welfare and reducing the workload of buyers and giving them pure green vegetables at their doorstep
+</p>
+<p>Description</p>
+<ul>
+    <li>Generation of production graph which in order to prevent the profitless income for farmers</li>
+    <li>
+      	A Platform to sell the farmers product directly to the customers without involvement of middle man need to be introduced.</li>
+   
+    
+</ul>
+<p>Key Feature</p>
+<p>Production Graph:<br>
+    The vegetables ,fruits which will be in demand   is monitored using data analytics and graph is been generated. And with help of these graphs production techniques is been generated.<br>Production Techniques:<br>
+Based on demand production graph is generated each farmer will be suggested with individual instruction to do farming for their welfare
+
+</p>
+<p>App Shots</p>
+<image src="https://1.bp.blogspot.com/-Jsg557f3i0Q/Wn7aDEKnABI/AAAAAAAACa0/s1LbjyWH40wtE3FZnOjc_aqj0PJ40KqvQCLcBGAs/s1600/Screenshot_1517534808.png" style="width:200px;height:400px; "/>
+<image src="https://4.bp.blogspot.com/-zUl167kCbsI/Wn7aCzdu8ZI/AAAAAAAACaw/qeHByvj4VzI4qhVUu-DgPgyWJ-6uQlbgwCLcBGAs/s1600/Screenshot_1517534819.png" style="width:200px;height:400px; margin-left:30px "/>
+<image src="https://3.bp.blogspot.com/-oUAS0ifd5cc/Wn7aCsG6yJI/AAAAAAAACas/61c7-Oj5beow-hakKqPQtXH_w6E6-WAsQCLcBGAs/s1600/Screenshot_1517534826.png" style="width:200px;height:400px; margin-left:30px "/>
+<image src="https://3.bp.blogspot.com/-8hKrS6Bo7Jc/Wn7aFPZmb8I/AAAAAAAACa8/uTGwypxv490ZYYMH2yzS0yFkoDda4VD6wCLcBGAs/s1600/Screenshot_1517534847.png" style="width:200px;height:400px; "/>
+<image src="https://1.bp.blogspot.com/-K9KTPW6Jq5Q/Wn7aD-20SwI/AAAAAAAACa4/qQyDWKFywWQY77w6e_lUXJQfTda2BCiXwCLcBGAs/s1600/Screenshot_1517534900.png" style="width:200px;height:400px; margin-left:30px "/>
+<image src="https://1.bp.blogspot.com/-0785Mup60PY/Wn7cgHH6TtI/AAAAAAAACbM/OYHFPVvsBBo0zD5-CuIU8JFi4evr-cQ5gCLcBGAs/s1600/Screenshot_1517534902.png" style="width:200px;height:400px; margin-left:30px "/>
+
+<p>Contributors</p>
+    <ul>
+        <li>Myself</li>
+        <li>Selvakumar</li>
+        <li>Naveen Prasath</li>
+        <li> Nirmal Raaj</li>
+    </ul>
+  <a href="https://drive.google.com/file/d/11qQhNDehiGZdHUpow5cW3GpxxwHLmnGy/view?usp=sharing" target="blank"  class="button1" ><span>View Document </span></a>
+
+</div>
+
+
+
+      </div>  
+        
+  </div>
+    
+    <div class="container  w3-container" style="background-color:black; opacity:0.9; margin-top: 20px" >  
+  <form id="contact" action="" method="post">
+    <p style="color:#0179F4 ">Contact</p>
+    <p style="color:white">Think you are Searching For This ...</p>
+    <i style="color:#0179F4;font-size:48px;margin-left: 200px" class="fa"><a href="https://www.facebook.com/lingeshwaran.rajkumar" target="blank">&#xf230;</a></i>
+    <i style="font-size:48px;color:#0179F4;margin-left:10px " class="fa"><a href="https://github.com/LingeshwaranR" target="blank">&#xf09b;</a></i>
+   
+    <i style="font-size:48px;color:#0179F4;margin-left:10px" class="fa"><a href="https://www.linkedin.com/in/lingeshwaranr911/" target="blank">&#xf08c;</a></i>
+    <i style="font-size:48px;color:#0179F4;margin-left:10px" class="fa"><a href="https://plus.google.com/u/0/103339824417190777618" target="blank">&#xf0d4;</a></i>
+    <i style="font-size:48px;color:#0179F4;margin-left:10px" class="fa"><a href="https://twitter.com/lingesh28714382" target="blank">&#xf081;</a></i><br>
+    <p  style="color:white;font-size:px;text-align: center;margin-top: 10px">9751595324 |<a href="mailto:lingeshwaran@gmail.com" style="color:white"> lingeshwaran@gmail.com</a></p>
+    <p style="color:white;font-size: 18px;text-align: center;margin-top: 10px">Blog -> <a style="color:white"  href="techkshare.blogspot.in">techkshare.blogspot.in </a>
+    <fieldset style="margin-top: 20px">
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
+    </fieldset>
+    <fieldset>
+      <input placeholder="Your Email Address" type="email" tabindex="2" required>
+    </fieldset>
+    
+    <fieldset>
+      <textarea placeholder="Type your Message Here...." tabindex="5" required></textarea>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+    </fieldset>
+  </form>
+    </div>
+       <a href="#home" class="button" style="margin-left:50% " ><span>Go top </span></a>
+
+</div>
+
+</body>
+</html> 
